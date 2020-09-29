@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@id/car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginBottom="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:layout_marginStart="16dp" />
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint
+            android:id="@id/car"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="16dp"
+            android:layout_marginBottom="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_marginEnd="16dp" />
+        <Constraint
+            android:layout_height="19dp"
+            android:layout_width="26dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            android:id="@+id/win" />
+    </ConstraintSet>
+
+    <Transition
+        app:constraintSetEnd="@+id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="1000"
+        app:motionInterpolator="linear">
+
+        <OnSwipe
+            app:dragDirection="dragRight"
+            app:touchAnchorId="@+id/car"
+            app:touchAnchorSide="right" />
+        <KeyFrameSet >
+            <KeyAttribute
+                app:motionTarget="@+id/win"
+                app:framePosition="100"
+                android:alpha="1" />
+            <KeyAttribute
+                app:motionTarget="@+id/win"
+                app:framePosition="80"
+                android:alpha="0" />
+            <KeyAttribute
+                app:motionTarget="@+id/win"
+                app:framePosition="0"
+                android:alpha="0" />
+        </KeyFrameSet>
+    </Transition>
+
+</MotionScene>
