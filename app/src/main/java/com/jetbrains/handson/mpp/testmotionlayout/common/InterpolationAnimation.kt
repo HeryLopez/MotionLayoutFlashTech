@@ -2,7 +2,6 @@ package com.jetbrains.handson.mpp.testmotionlayout.common
 
 import android.view.animation.Animation
 import android.view.animation.Transformation
-import android.widget.ProgressBar
 import androidx.constraintlayout.motion.widget.MotionLayout
 
 class InterpolationAnimation(

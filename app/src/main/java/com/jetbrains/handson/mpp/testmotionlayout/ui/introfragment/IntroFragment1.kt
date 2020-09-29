@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.constraintlayout.motion.widget.MotionLayout
 import com.jetbrains.handson.mpp.testmotionlayout.R
 
 class IntroFragment1 : Fragment() {
