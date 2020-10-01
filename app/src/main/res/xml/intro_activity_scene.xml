@@ -25,12 +25,17 @@
             app:layout_constraintRight_toRightOf="parent"
             android:layout_marginEnd="16dp" />
         <Constraint
-            android:layout_height="19dp"
-            android:layout_width="26dp"
+            android:layout_height="28dp"
+            android:layout_width="33dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
 
-            android:id="@+id/win" />
+            android:id="@+id/win"
+            app:layout_editor_absoluteX="370dp"
+            app:layout_editor_absoluteY="695dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp" />
     </ConstraintSet>
 
     <Transition
@@ -55,6 +60,15 @@
             <KeyAttribute
                 app:motionTarget="@+id/win"
                 app:framePosition="0"
+                android:alpha="0" />
+
+            <KeyAttribute
+                app:motionTarget="@+id/car"
+                app:framePosition="80"
+                android:alpha="1" />
+            <KeyAttribute
+                app:motionTarget="@+id/car"
+                app:framePosition="100"
                 android:alpha="0" />
         </KeyFrameSet>
     </Transition>

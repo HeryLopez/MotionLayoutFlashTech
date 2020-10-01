@@ -6,8 +6,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#FFFFFF"
-    app:layoutDescription="@xml/motion_scene2"
-    app:showPaths="true"
+    app:layoutDescription="@xml/motion_scene_rotation"
+    tools:showPaths="true"
     tools:context=".MainActivity">
 
     <View

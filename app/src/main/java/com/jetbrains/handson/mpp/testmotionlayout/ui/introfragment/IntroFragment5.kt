@@ -8,22 +8,21 @@ import android.view.ViewGroup
 import androidx.constraintlayout.motion.widget.MotionLayout
 import com.jetbrains.handson.mpp.testmotionlayout.R
 
-class IntroFragment4 : Fragment() {
+class IntroFragment5 : Fragment() {
 
     companion object {
-        fun newInstance() = IntroFragment4()
+        fun newInstance() = IntroFragment5()
     }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.intro_fragment_rotation, container, false)
+        return inflater.inflate(R.layout.intro_fragment_pizza, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<MotionLayout>(R.id.root).transitionToEnd()
-        view.findViewById<MotionLayout>(R.id.root).setDebugMode(2)
     }
 }

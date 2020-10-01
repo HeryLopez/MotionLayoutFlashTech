@@ -18,7 +18,7 @@ class IntroFragment3 : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        return inflater.inflate(R.layout.intro_fragment3_fragment, container, false)
+        return inflater.inflate(R.layout.intro_fragment_rotation, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

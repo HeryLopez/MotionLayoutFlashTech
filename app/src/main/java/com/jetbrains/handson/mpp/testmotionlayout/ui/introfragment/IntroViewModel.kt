@@ -6,7 +6,7 @@ import androidx.lifecycle.ViewModel
 
 class IntroViewModel : ViewModel() {
     val firstScreen: Int = 1
-    val lastScreens: Int = 4
+    val lastScreens: Int = 6
 
     private val _currentScreen = MutableLiveData(firstScreen)
     val currentScreen: LiveData<Int>

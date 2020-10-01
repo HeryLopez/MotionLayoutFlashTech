@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_bike"
+        app:srcCompat="@drawable/ic_delivery"
         />
 
     <ImageView
@@ -27,6 +27,6 @@
         android:layout_height="19dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:srcCompat="@drawable/ic_win" />
+        app:srcCompat="@drawable/ic_pizza_original" />
 
 </androidx.constraintlayout.motion.widget.MotionLayout>
