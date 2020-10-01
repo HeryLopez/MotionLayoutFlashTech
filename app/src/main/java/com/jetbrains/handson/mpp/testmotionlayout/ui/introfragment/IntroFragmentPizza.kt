@@ -8,10 +8,27 @@ import android.view.ViewGroup
 import androidx.constraintlayout.motion.widget.MotionLayout
 import com.jetbrains.handson.mpp.testmotionlayout.R
 
-class IntroFragment5 : Fragment() {
+private const val ARG_SHOW_PATHS = "showPaths"
+
+class IntroFragmentPizza : Fragment() {
+
+    private var showPaths: Boolean = false
 
     companion object {
-        fun newInstance() = IntroFragment5()
+        @JvmStatic
+        fun newInstance(showPaths: Boolean) =
+            IntroFragmentPizza().apply {
+                arguments = Bundle().apply {
+                    putBoolean(ARG_SHOW_PATHS, showPaths)
+                }
+            }
+    }
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        arguments?.let {
+            showPaths = it.getBoolean(ARG_SHOW_PATHS)
+        }
     }
 
     override fun onCreateView(
@@ -24,5 +41,8 @@ class IntroFragment5 : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         view.findViewById<MotionLayout>(R.id.root).transitionToEnd()
+        if(showPaths){
+            view.findViewById<MotionLayout>(R.id.root).setDebugMode(2)
+        }
     }
 }

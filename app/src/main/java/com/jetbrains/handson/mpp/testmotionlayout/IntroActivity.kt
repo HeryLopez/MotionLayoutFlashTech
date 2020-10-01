@@ -58,10 +58,10 @@ class IntroActivity : AppCompatActivity() {
             when (currentScreen) {
                 1 -> navigateTo(IntroFragment1.newInstance())
                 2 -> navigateTo(IntroFragment2.newInstance())
-                3 -> navigateTo(IntroFragment3.newInstance())
-                4 -> navigateTo(IntroFragment4.newInstance())
-                5 -> navigateTo(IntroFragment5.newInstance())
-                6 -> navigateTo(IntroFragment6.newInstance())
+                3 -> navigateTo(IntroFragmentRotation.newInstance(false))
+                4 -> navigateTo(IntroFragmentRotation.newInstance(true))
+                5 -> navigateTo(IntroFragmentPizza.newInstance(false))
+                6 -> navigateTo(IntroFragmentPizza.newInstance(true))
             }
 
             button_previous.isEnabled = currentScreen != viewModel.firstScreen
